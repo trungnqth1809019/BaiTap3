@@ -24,7 +24,7 @@ int main() {
     int ia, ilc;
     printf("nhap vao so luong phan tu(so phan tu phai nho hon hoac bang 10)\n");
     scanf("%d", &ia);
-    while(ia<=0 || ia>10){
+    while (ia <= 0 || ia > 10) {
         printf("so luong phan tu khong hop le\n");
         printf("moi nhap lai\n");
         scanf("%d", &ia);
@@ -38,11 +38,16 @@ int main() {
     for (int i = 0; i < ia; i++) {
         printf("phan tu thu %d la: %d\n", i + 1, *(array + i));
     }
-    printf("chon phep tinh\n");
+    printf("\nchon phep tinh\n");
     printf("1. tim so lon nhat\n");
     printf("2. tim so nho nhat\n");
     printf("lua chon cua ban 1/2\n");
     scanf("%d", &ilc);
+    while (!(ilc == 1 || ilc == 2)) {
+        printf("lua chon khong hop le\n");
+        printf("moi chon lai\n");
+        scanf("%d", &ilc);
+    }
     switch (ilc) {
         case 1:
             printf("so lon nhat la %d\n", findMaxValue(array, ia));
