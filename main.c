@@ -24,6 +24,11 @@ int main() {
     int ia, ilc;
     printf("nhap vao so luong phan tu(so phan tu phai nho hon hoac bang 10)\n");
     scanf("%d", &ia);
+    while(ia<=0 || ia>10){
+        printf("so luong phan tu khong hop le\n");
+        printf("moi nhap lai\n");
+        scanf("%d", &ia);
+    }
     int array[ia];
     for (int i = 0; i < ia; i++) {
         printf("nhap vao phan tu thu %d:\n", i + 1);
